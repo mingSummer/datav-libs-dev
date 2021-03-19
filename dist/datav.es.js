@@ -103,7 +103,7 @@ var _hoisted_2$1 = /*#__PURE__*/createVNode("defs", null, [/*#__PURE__*/createVN
 
 popScopeId();
 
-var render$4 = /*#__PURE__*/_withId$3(function (_ctx, _cache, $props, $setup, $data, $options) {
+var render$4 = /*#__PURE__*/_withId$3(function render(_ctx, _cache) {
   return openBlock(), createBlock("svg", _hoisted_1$4, [_hoisted_2$1]);
 });
 
@@ -165,8 +165,8 @@ var _hoisted_1$3 = {
 
 popScopeId();
 
-var render$3 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createBlock("div", _hoisted_1$3, [createVNode("div", null, toDisplayString($setup.message), 1
+var render$3 = /*#__PURE__*/_withId$2(function render(_ctx, _cache) {
+  return openBlock(), createBlock("div", _hoisted_1$3, [createVNode("div", null, toDisplayString(_ctx.message), 1
   /* TEXT */
   )]);
 });
@@ -202,8 +202,8 @@ var _hoisted_1$2 = {
 
 popScopeId();
 
-var render$2 = /*#__PURE__*/_withId$1(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createBlock("div", _hoisted_1$2, [createVNode("div", null, toDisplayString($setup.message), 1
+var render$2 = /*#__PURE__*/_withId$1(function render(_ctx, _cache) {
+  return openBlock(), createBlock("div", _hoisted_1$2, [createVNode("div", null, toDisplayString(_ctx.message), 1
   /* TEXT */
   )]);
 });
@@ -289,12 +289,12 @@ function _objectSpread2(target) {
 var _hoisted_1$1 = {
   "class": "icon"
 };
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1(_ctx, _cache) {
   return openBlock(), createBlock("div", {
     "class": "icon-wrapper",
-    style: _objectSpread2({}, $props.style)
+    style: _objectSpread2({}, _ctx.style)
   }, [(openBlock(), createBlock("svg", _hoisted_1$1, [createVNode("use", {
-    href: $setup.iconName
+    href: _ctx.iconName
   }, null, 8
   /* PROPS */
   , ["href"])]))], 4
@@ -341,7 +341,8 @@ var _hoisted_2 = /*#__PURE__*/createVNode("div", {
   "class": "container"
 }, [/*#__PURE__*/createVNode("svg", {
   width: "440",
-  height: "440"
+  height: "440",
+  viewBox: "0 0 440 440"
 }, [/*#__PURE__*/createVNode("circle", {
   cx: "220",
   cy: "220",
@@ -356,18 +357,19 @@ var _hoisted_2 = /*#__PURE__*/createVNode("div", {
   r: "200",
   "stroke-width": "20",
   stroke: "#00A5E0",
-  fill: "none"
+  fill: "none",
+  transform: "matrix(0,-1,1,0,0,440)"
 })])], -1
 /* HOISTED */
 );
 
 popScopeId();
 
-var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
+var render = /*#__PURE__*/_withId(function render(_ctx, _cache) {
   return openBlock(), createBlock("div", null, [_hoisted_1, _hoisted_2]);
 });
 
-var css_248z = ".container[data-v-5a151e4f] svg[data-v-5a151e4f] {\n  border: 1px solid #000;\n}\n\n.circle[data-v-5a151e4f] {\n  animation: circle 5s linear infinite;\n}";
+var css_248z = "\n.container svg[data-v-5a151e4f] {\r\n    border: 1px solid #000;\n}\n.circle[data-v-5a151e4f] {\r\n  animation: circle-data-v-5a151e4f 5s linear infinite;\r\n  -webkit-animation:circle-data-v-5a151e4f 5s linear infinite; /* Safari 和 Chrome */\n}\n@keyframes circle-data-v-5a151e4f {\nfrom{\r\n    stroke-dasharray: 0 1257;\n}\nto{\r\n    stroke-dasharray: 1257 0;\n}\n}\r\n";
 styleInject(css_248z);
 
 script.render = render;
